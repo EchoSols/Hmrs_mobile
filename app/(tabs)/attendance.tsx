@@ -1,7 +1,7 @@
-
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 import { commonStyles, colors } from '../../styles/commonStyles';
 import AuthGuard from '../../components/AuthGuard';
 import { useState } from 'react';
@@ -81,25 +81,28 @@ function AttendanceContent() {
   return (
     <View style={commonStyles.container}>
       {/* Header */}
-      <View style={commonStyles.header}>
-        <View style={[commonStyles.row, { marginBottom: 16 }]}>
+      <LinearGradient
+        colors={[colors.gradient.middle, colors.gradient.end]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={commonStyles.header}
+      >
+        <View style={[commonStyles.row, { marginBottom: 16 }]}> 
           <View style={{ flex: 1 }}>
             <Text style={commonStyles.title}>Time & Attendance</Text>
-            <Text style={commonStyles.subtitle}>
-              Today's attendance overview
-            </Text>
+            <Text style={commonStyles.subtitle}>Today's attendance overview</Text>
           </View>
           <TouchableOpacity
             style={{
-              backgroundColor: colors.primary,
+              backgroundColor: 'rgba(255, 255, 255, 0.2)',
               borderRadius: 20,
-              padding: 12,
+              padding: 8,
             }}
           >
             <Ionicons name="calendar" size={20} color={colors.background} />
           </TouchableOpacity>
         </View>
-      </View>
+      </LinearGradient>
 
       <ScrollView 
         style={commonStyles.content} 

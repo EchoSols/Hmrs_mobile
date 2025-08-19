@@ -1,4 +1,3 @@
-
 import { View, Text, ScrollView, TouchableOpacity, TextInput, Image, ActivityIndicator } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,6 +9,7 @@ import { Employee } from '../../types';
 import { useState, useRef } from 'react';
 import BottomSheet from '@gorhom/bottom-sheet';
 import CustomBottomSheet from '../../components/BottomSheet';
+import { LinearGradient } from 'expo-linear-gradient';
 
 function EmployeesContent() {
   const { employees, loading } = useEmployees();
@@ -65,8 +65,13 @@ function EmployeesContent() {
   return (
     <View style={commonStyles.container}>
       {/* Header */}
-      <View style={commonStyles.header}>
-        <View style={[commonStyles.row, { marginBottom: 16 }]}>
+      <LinearGradient
+        colors={[colors.gradient.middle, colors.gradient.end]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={commonStyles.header}
+      >
+        <View style={[commonStyles.row, { marginBottom: 16 }]}> 
           <View style={{ flex: 1 }}>
             <Text style={commonStyles.title}>Employee Management</Text>
             <Text style={commonStyles.subtitle}>
@@ -76,9 +81,9 @@ function EmployeesContent() {
           <TouchableOpacity
             onPress={openAddEmployee}
             style={{
-              backgroundColor: colors.primary,
+              backgroundColor: 'rgba(255, 255, 255, 0.2)',
               borderRadius: 20,
-              padding: 12,
+              padding: 8,
             }}
           >
             <Ionicons name="person-add" size={20} color={colors.background} />
@@ -105,7 +110,7 @@ function EmployeesContent() {
             onChangeText={setSearchQuery}
           />
         </View>
-      </View>
+      </LinearGradient>
 
       <ScrollView 
         style={commonStyles.content} 

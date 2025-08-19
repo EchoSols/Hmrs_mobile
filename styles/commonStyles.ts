@@ -62,19 +62,20 @@ export const commonStyles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   header: {
-    paddingTop: 20,
+    paddingTop: 40,
     paddingBottom: 16,
     paddingHorizontal: 20,
+    marginBottom: 20
   },
   title: {
     fontSize: 28,
     fontWeight: '800',
-    color: colors.text,
+    color: "#ffffff",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 16,
-    color: colors.textSecondary,
+    color: "#ffffff",
     lineHeight: 24,
   },
   sectionTitle: {
