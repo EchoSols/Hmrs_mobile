@@ -297,7 +297,7 @@ function DashboardContent() {
       </ScrollView>
 
       {/* Notifications Bottom Sheet */}
-      <CustomBottomSheet ref={bottomSheetRef} title="Notifications">
+      {/* <CustomBottomSheet ref={bottomSheetRef} title="Notifications">
         <ScrollView>
           <View style={commonStyles.card}>
             <View style={[commonStyles.row, { marginBottom: 12 }]}>
@@ -329,7 +329,7 @@ function DashboardContent() {
             <Text style={commonStyles.textSecondary}>Q1 performance reviews start next week</Text>
           </View>
         </ScrollView>
-      </CustomBottomSheet>
+      </CustomBottomSheet> */}
     </View>
   );
 }

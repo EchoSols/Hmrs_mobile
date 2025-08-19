@@ -10,7 +10,7 @@ export const mockEmployees: Employee[] = [
     position: 'Senior Marketing Manager',
     department: 'Marketing',
     status: 'active',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=150&h=150&fit=crop&crop=face',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
     hireDate: '2022-03-15',
     salary: 85000,
     manager: 'John Smith',

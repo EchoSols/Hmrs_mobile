@@ -93,11 +93,11 @@ function EmployeesContent() {
         {/* Search Bar */}
         <View style={{
           backgroundColor: colors.card,
-          borderRadius: 12,
+          borderRadius: 50,
           flexDirection: 'row',
           alignItems: 'center',
           paddingHorizontal: 16,
-          paddingVertical: 12,
+          paddingVertical: 10,
           borderWidth: 1,
           borderColor: colors.border,
         }}>
@@ -214,7 +214,7 @@ function EmployeesContent() {
       </ScrollView>
 
       {/* Employee Details Bottom Sheet */}
-      <CustomBottomSheet ref={bottomSheetRef} title="Employee Details">
+      {/* <CustomBottomSheet ref={bottomSheetRef} title="Employee Details">
         {selectedEmployee && (
           <ScrollView>
             <View style={[commonStyles.card, { alignItems: 'center' }]}>
@@ -319,7 +319,7 @@ function EmployeesContent() {
             </View>
           </ScrollView>
         )}
-      </CustomBottomSheet>
+      </CustomBottomSheet> */}
     </View>
   );
 }
